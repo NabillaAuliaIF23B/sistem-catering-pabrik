@@ -1,0 +1,78 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/dashboard-hrga"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Daftar Jadwal Shift</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-label>Filter Berdasarkan</ion-label>
+    <ion-select [(ngModel)]="filterMode">
+      <ion-select-option value="tanggal">Tanggal</ion-select-option>
+      <ion-select-option value="bulan">Bulan</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <div *ngIf="filterMode === 'tanggal'">
+    <ion-item>
+      <ion-label position="floating">Tanggal</ion-label>
+      <br>
+      <ion-datetime [(ngModel)]="filterTanggal" presentation="date"></ion-datetime>
+    </ion-item>
+  </div>
+
+  <div *ngIf="filterMode === 'bulan'">
+    <ion-item>
+      <ion-label position="floating">Bulan</ion-label>
+      <ion-select [(ngModel)]="filterBulan">
+        <ion-select-option *ngFor="let b of bulanList" [value]="b.value">{{ b.label }}</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label>Tahun</ion-label>
+      <ion-datetime
+        [(ngModel)]="filterTahun"
+        presentation="year"
+        display-format="yyyy"
+        style="max-width: 130px;"
+        class="year-picker"
+      ></ion-datetime>
+    </ion-item>
+
+  </div>
+
+  <ion-button expand="block" (click)="loadJadwal()">Tampilkan Jadwal</ion-button>
+
+
+  <ion-content>
+    <div *ngIf="jadwals.length > 0; else noData" class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Nama</th>
+            <th>Tanggal</th>
+            <th>Shift</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let jadwal of jadwals; let i = index">
+            <td>{{ jadwal.nama || 'Nama tidak ditemukan' }}</td>
+            <td>{{ jadwal.tanggal }}</td>
+            <td>{{ jadwal.shift.replace('_', ' ').toUpperCase() }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <ng-template #noData>
+      <ion-text color="medium">
+        <p class="ion-padding">Tidak ada data jadwal.</p>
+      </ion-text>
+    </ng-template>
+  </ion-content>
+

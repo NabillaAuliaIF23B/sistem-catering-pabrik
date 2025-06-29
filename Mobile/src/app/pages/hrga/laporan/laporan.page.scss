@@ -1,0 +1,30 @@
+ion-row {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+ion-col {
+  font-size: 14px;
+}
+
+ion-header, ion-toolbar, ion-content, ion-footer {
+  box-shadow: none !important;
+  border: none !important;
+  --border-width: 0 !important;
+  --border-color: transparent !important;
+  
+}
+
+.icon-buttons {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+ion-button {
+  width: 100%;
+}
+
+ion-icon {
+  color: black;
+}

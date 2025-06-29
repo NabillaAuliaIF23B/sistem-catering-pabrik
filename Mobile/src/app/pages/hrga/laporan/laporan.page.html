@@ -1,0 +1,108 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Laporan Konsumsi</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form [formGroup]="filterForm" (ngSubmit)="getLaporan()">
+    <ion-item>
+      <ion-label>Filter</ion-label>
+      <ion-select formControlName="mode">
+        <ion-select-option value="bulan">Bulan</ion-select-option>
+        <ion-select-option value="minggu">Minggu</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item *ngIf="filterForm.value.mode === 'bulan'">
+      <ion-label position="stacked">Pilih Bulan</ion-label>
+      <ion-select formControlName="value">
+        <ion-select-option *ngFor="let i of [1,2,3,4,5,6,7,8,9,10,11,12]" [value]="i">{{ getNamaBulan(i) }}</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item *ngIf="filterForm.value.mode === 'minggu'">
+      <ion-label position="stacked">Tanggal dalam Minggu</ion-label>
+      <ion-datetime display-format="YYYY-MM-DD" formControlName="value"></ion-datetime>
+    </ion-item>
+
+    <ion-button expand="full" type="submit">Tampilkan</ion-button>
+  </form>
+
+  <ion-grid *ngIf="laporanData.length > 0">
+  <ion-row class="ion-text-center" color="primary">
+    <ion-col><strong>Tanggal</strong></ion-col>
+    <ion-col><strong>Shift</strong></ion-col>
+    <ion-col><strong>Validasi Dapur</strong></ion-col>
+    <ion-col><strong>Jumlah Scan</strong></ion-col>
+    <ion-col><strong>Sisa Makanan</strong></ion-col>
+  </ion-row>
+
+  <ion-row *ngFor="let item of laporanData" class="ion-text-center">
+    <ion-col>{{ item.tanggal }}</ion-col>
+    <ion-col>{{ item.shift }}</ion-col>
+    <ion-col>{{ item.jumlah_validasi_dapur }}</ion-col>
+    <ion-col>{{ item.jumlah_scan }}</ion-col>
+    <ion-col>{{ item.sisa_makanan }}</ion-col>
+  </ion-row>
+</ion-grid>
+
+
+  <!--
+  <ion-list *ngIf="laporanData.length > 0">
+    <ion-item *ngFor="let item of laporanData">
+      <ion-label>
+        <h3>{{ item.tanggal }} - {{ item.shift }}</h3>
+        <p>Validasi Dapur: {{ item.jumlah_validasi_dapur }}</p>
+        <p>Jumlah Scan: {{ item.jumlah_scan }}</p>
+        <p>Sisa Makanan: {{ item.sisa_makanan }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>-->
+
+  <p *ngIf="laporanData.length === 0 && filterForm.value.value">Tidak ada data.</p>
+</ion-content>
+
+
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="start" class="icon-buttons">
+      <ion-button 
+        [routerLink]="['/dashboard-hrga']" 
+        fill="clear" 
+        size="large"
+        aria-label="Dashboard"
+        (click)="removeFocusBeforeNavigate()">
+        <ion-icon name="grid-outline"></ion-icon>
+      </ion-button>
+      <ion-button 
+        [routerLink]="['/data-karyawan']" 
+        fill="clear" 
+        size="large"
+        aria-label="Data Karyawan"
+        (click)="removeFocusBeforeNavigate()">
+        <ion-icon name="people-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end" class="icon-buttons">
+      <ion-button 
+        [routerLink]="['/laporan']" 
+        fill="clear" 
+        size="large"
+        aria-label="Halaman 3"
+        (click)="removeFocusBeforeNavigate()">
+        <ion-icon name="list-outline"></ion-icon>
+      </ion-button>
+      <ion-button 
+        [routerLink]="['/profile-hrga']" 
+        fill="clear" 
+        size="large"
+        aria-label="Profil HRGA"
+        (click)="removeFocusBeforeNavigate()">
+        <ion-icon name="person-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

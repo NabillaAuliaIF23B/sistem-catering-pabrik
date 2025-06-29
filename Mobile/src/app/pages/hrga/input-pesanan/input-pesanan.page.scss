@@ -1,0 +1,31 @@
+ion-header, ion-toolbar, ion-content, ion-footer {
+  box-shadow: none !important;
+  border: none !important;
+  --border-width: 0 !important;
+  --border-color: transparent !important;
+  
+}
+
+
+ion-content {
+  --padding-start: 16px;
+  --padding-end: 16px;
+  --padding-top: 20px;
+  --padding-bottom: 20px;
+  background: #f9f9f9;
+}
+
+ion-item {
+  border-radius: 12px;
+  --background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+ion-label {
+  font-weight: 500;
+}
+
+ion-button {
+  margin-top: 20px;
+  --border-radius: 12px;
+}

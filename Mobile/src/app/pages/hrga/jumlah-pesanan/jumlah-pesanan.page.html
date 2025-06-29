@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/dashboard-hrga"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Pesanan Makanan</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-item>
+    <ion-label>Tanggal</ion-label>
+    <ion-datetime
+      display-format="YYYY-MM-DD"
+      [(ngModel)]="selectedDate">
+    </ion-datetime>
+  </ion-item>
+
+  <ion-button expand="full" (click)="loadData()">Tampilkan Data</ion-button>
+
+  <ion-card *ngIf="pesananList.length > 0" class="ion-padding">
+    <ion-grid>
+      <ion-row>
+        <ion-col><strong>Tanggal</strong></ion-col>
+        <ion-col><strong>Shift</strong></ion-col>
+        <ion-col><strong>Jumlah Pesanan</strong></ion-col>
+      </ion-row>
+
+      <ion-row *ngFor="let item of pesananList">
+        <ion-col>{{ item.tanggal }}</ion-col>
+        <ion-col>{{ item.shift }}</ion-col>
+        <ion-col>{{ item.jumlah_pesanan }}</ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
+  <ion-card *ngIf="pesananList.length === 0 && dataFetched" color="light">
+    <ion-card-content class="ion-text-center">
+      <p>Data tidak ditemukan.</p>
+    </ion-card-content>
+  </ion-card>
+  
+</ion-content>

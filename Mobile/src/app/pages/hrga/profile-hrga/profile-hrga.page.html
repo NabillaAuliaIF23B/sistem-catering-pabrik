@@ -1,0 +1,90 @@
+<ion-content [fullscreen]="true">
+  <div class="main_content_div">
+    <div class="user_div">
+      <div class="first_div">
+        <ion-label class="username">{{ profil.nama }}</ion-label>
+        
+      </div>
+      <!--<div class="user_back user_black" [style.backgroundImage]="'url(' + getFotoUrl(profil.foto) + ')'"></div>-->
+
+     
+    </div>
+
+    <div class="content_div">
+      <div class="test_details">
+        <ion-grid fixed>
+          <ion-row>
+
+            <ion-col size="6">
+              <div class="flex_div">
+
+                <div class="round_div">                 
+                  <ion-icon slot="start" name="person-circle"></ion-icon>
+                </div>
+
+                <div class="details">
+                  <ion-label class="bold_lbl">{{ profil.role }}</ion-label>
+                </div>
+              </div>
+            </ion-col>
+
+          </ion-row>
+        </ion-grid>
+      </div>
+
+      <div class="list_div" [routerLink]="['/ganti-password']">
+        <ion-label>Ganti Password</ion-label> 
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </div>
+
+      <div class="list_div" (click)="logout()">
+        <ion-label>Log Out</ion-label>
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </div>
+    </div>
+
+
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="start" class="icon-buttons">
+      <ion-button 
+        [routerLink]="['/dashboard-hrga']" 
+        fill="clear" 
+        size="large"
+        aria-label="Dashboard"
+        (click)="removeFocusBeforeNavigate()">
+        <ion-icon name="grid-outline"></ion-icon>
+      </ion-button>
+      <ion-button 
+        [routerLink]="['/data-karyawan']" 
+        fill="clear" 
+        size="large"
+        aria-label="Data Karyawan"
+        (click)="removeFocusBeforeNavigate()">
+        <ion-icon name="people-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end" class="icon-buttons">
+      <ion-button 
+        [routerLink]="['/laporan']" 
+        fill="clear" 
+        size="large"
+        aria-label="Halaman 3"
+        (click)="removeFocusBeforeNavigate()">
+        <ion-icon name="list-outline"></ion-icon>
+      </ion-button>
+      <ion-button 
+        [routerLink]="['/profile-hrga']" 
+        fill="clear" 
+        size="large"
+        aria-label="Profil HRGA"
+        (click)="removeFocusBeforeNavigate()">
+        <ion-icon name="person-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

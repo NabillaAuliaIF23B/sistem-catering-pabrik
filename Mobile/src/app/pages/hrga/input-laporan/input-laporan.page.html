@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/dashboard-hrga"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Input jumlah Laporan</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+<form [formGroup]="laporanForm" (ngSubmit)="submitLaporan()">
+
+  <ion-item>
+    <ion-label position="floating">Tanggal</ion-label>
+    <br>
+    <ion-datetime display-format="YYYY-MM-DD" formControlName="tanggal"></ion-datetime>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Shift</ion-label>
+    <ion-select formControlName="shift">
+      <ion-select-option value="shift_1">Shift 1</ion-select-option>
+      <ion-select-option value="shift_2">Shift 2</ion-select-option>
+      <ion-select-option value="shift_3">Shift 3</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Jumlah Validasi Dapur</ion-label>
+    <ion-input type="number" formControlName="jumlah_validasi_dapur"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Jumlah Scan</ion-label>
+    <ion-input type="number" formControlName="jumlah_scan"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Sisa Makanan</ion-label>
+    <ion-input type="number" formControlName="sisa_makanan"></ion-input>
+  </ion-item>
+
+  <ion-button expand="block" type="submit" [disabled]="laporanForm.invalid">Simpan</ion-button>
+</form>
+</ion-content>

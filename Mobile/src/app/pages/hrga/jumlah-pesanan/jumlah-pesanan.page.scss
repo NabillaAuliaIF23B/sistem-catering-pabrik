@@ -1,0 +1,15 @@
+ion-col {
+  text-align: center;
+  font-size: 14px;
+}
+
+ion-row:nth-child(odd) {
+  background-color: #f8f9fa;
+}
+ion-header, ion-toolbar, ion-content, ion-footer {
+  box-shadow: none !important;
+  border: none !important;
+  --border-width: 0 !important;
+  --border-color: transparent !important;
+  
+}

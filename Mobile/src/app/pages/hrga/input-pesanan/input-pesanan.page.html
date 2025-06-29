@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar >
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/dashboard-hrga"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Input Jumlah Pesanan</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen class="ion-padding">
+  <form *ngIf="form" [formGroup]="form" (ngSubmit)="submit()">
+    <ion-item>
+      <ion-label position="floating">Tanggal</ion-label>
+      <br>
+      <ion-datetime formControlName="tanggal" presentation="date"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Shift</ion-label>
+      <ion-select formControlName="shift" interface="alert">
+        <ion-select-option value="1">Shift 1</ion-select-option>
+        <ion-select-option value="2">Shift 2</ion-select-option>
+        <ion-select-option value="3">Shift 3</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Jumlah Porsi</ion-label>
+      <ion-input type="number" formControlName="jumlah_pesanan"></ion-input>
+    </ion-item>
+
+    <ion-item>
+  <ion-label position="floating">Latitude</ion-label>
+  <ion-input formControlName="latitude" readonly></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="floating">Longitude</ion-label>
+  <ion-input formControlName="longitude" readonly></ion-input>
+</ion-item>
+
+<!-- 👇 Jarak Tampil Di Sini -->
+  <ion-item *ngIf="jarak !== null && lokasiKantor">
+  <ion-label color="medium">
+    <p>
+      Jarak Anda ke kantor: <strong>{{ jarak?.toFixed(2) }} meter</strong><br>
+      Lokasi kantor: <strong>{{ lokasiKantor.latitude }}, {{ lokasiKantor.longitude }}</strong>
+    </p>
+  </ion-label>
+</ion-item>
+
+
+
+
+
+
+    <ion-button expand="full" type="submit" [disabled]="form.invalid">Simpan</ion-button>
+  </form>
+</ion-content>
