@@ -61,17 +61,6 @@ export class DashboardKaryawanPage implements OnInit {
 );
 
 
-/*
-  this.http.get('https://catering.kelompok47.my.id/api/qr-data', {
-    headers: { Authorization: `Bearer ${token}` }
-  }).subscribe(
-    (res: any) => {
-      this.qrString = JSON.stringify(res.data); // pastikan backend kirim `data`
-    },
-    (error) => {
-      console.error('Gagal ambil QR:', error);
-      this.qrString = ''; // untuk cegah error angularx-qrcode
-    }
-  );*/
+
 }
 }
