@@ -59,15 +59,5 @@ export class DashboardHrgaPage implements OnInit {
   });
 }
 
-  /*ngOnInit() {
-    this.api.getRingkasanPesanan().subscribe(res => {
-      this.total = res.total;
-      this.tanggal = res.tanggal;
 
-      res.shift.forEach((s: any) => {
-        if (s.shift === '1') this.shift1 = s.jumlah;
-        if (s.shift === '2') this.shift2 = s.jumlah;
-        if (s.shift === '3') this.shift3 = s.jumlah;
-      });
-    });*/
 }
