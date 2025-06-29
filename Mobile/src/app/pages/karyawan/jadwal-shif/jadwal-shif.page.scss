@@ -1,0 +1,24 @@
+ion-card {
+  border-radius: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-bottom: 15px;
+}
+
+
+
+ion-card-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+ion-card-content p {
+  font-size: 16px;
+}
+
+ion-header, ion-toolbar, ion-content, ion-footer {
+  box-shadow: none !important;
+  border: none !important;
+  --border-width: 0 !important;
+  --border-color: transparent !important;
+  
+}

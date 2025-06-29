@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/profile-karyawan"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Jadwal Shift</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-label>Bulan</ion-label>
+    <ion-select [(ngModel)]="filterBulan" (ionChange)="filterJadwal()">
+      <ion-select-option *ngFor="let b of daftarBulan" [value]="b.value">{{ b.nama }}</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item *ngIf="daftarTahun.length > 0">
+    <ion-label>Tahun</ion-label>
+    <ion-select [(ngModel)]="filterTahun" (ionChange)="filterJadwal()">
+      <ion-select-option *ngFor="let t of daftarTahun" [value]="t">{{ t }}</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <div *ngIf="jadwalFilter.length > 0; else kosong">
+    <ion-card *ngFor="let j of jadwalFilter">
+      <ion-card-header>
+        <ion-card-title>{{ j.tanggal | date: 'EEEE, d MMMM y' }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p  style="color: black;"><strong>Shift:</strong> {{ j.shift | titlecase }}</p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <ng-template #kosong>
+    <p>Belum ada jadwal shift untuk bulan dan tahun ini.</p>
+  </ng-template>
+</ion-content>
