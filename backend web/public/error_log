@@ -1,0 +1,79 @@
+[13-Jun-2025 18:23:05 UTC] PHP Fatal error:  Cannot use App\Http\Controllers\PesananMakananController as PesananMakananController because the name is already in use in /home/kelompo7/catering.kelompok47.my.id/routes/api.php on line 12
+[13-Jun-2025 23:49:19 UTC] PHP Fatal error:  Cannot use App\Http\Controllers\PesananMakananController as PesananMakananController because the name is already in use in /home/kelompo7/catering.kelompok47.my.id/routes/api.php on line 12
+[13-Jun-2025 23:50:17 UTC] PHP Fatal error:  Cannot use App\Http\Controllers\PesananMakananController as PesananMakananController because the name is already in use in /home/kelompo7/catering.kelompok47.my.id/routes/api.php on line 12
+[13-Jun-2025 23:52:29 UTC] PHP Fatal error:  Cannot use App\Http\Controllers\PesananMakananController as PesananMakananController because the name is already in use in /home/kelompo7/catering.kelompok47.my.id/routes/api.php on line 12
+[13-Jun-2025 23:52:54 UTC] PHP Fatal error:  Cannot use App\Http\Controllers\PesananMakananController as PesananMakananController because the name is already in use in /home/kelompo7/catering.kelompok47.my.id/routes/api.php on line 12
+[14-Jun-2025 10:49:52 UTC] PHP Fatal error:  Uncaught ReflectionException: Class "Fruitcake\Cors\HandleCors" does not exist in /home/kelompo7/catering.kelompok47.my.id/vendor/laravel/framework/src/Illuminate/Container/Container.php:889
+Stack trace:
+#0 /home/kelompo7/catering.kelompok47.my.id/vendor/laravel/framework/src/Illuminate/Container/Container.php(889): ReflectionClass->__construct()
+#1 /home/kelompo7/catering.kelompok47.my.id/vendor/laravel/framework/src/Illuminate/Container/Container.php(770): Illuminate\Container\Container->build()
+#2 /home/kelompo7/catering.kelompok47.my.id/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(881): Illuminate\Container\Container->resolve()
+#3 /home/kelompo7/catering.kelompok47.my.id/vendor/laravel/framework/src/Illuminate/Container/Container.php(706): Illuminate\Foundation\Application->resolve()
+#4 /home/kelompo7/catering.kelompok47.my.id/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(866): Illuminate\Container\Container->make()
+#5 /home/kelompo7/catering.kelompok47.my.id/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(239): Illuminate\Foundation\Application->make()
+#6 /home/kelompo7/catering.kelompok47.my.id/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(203): Illuminate\Foundation\Http\Kernel->terminateMiddleware()
+#7 /home/kelompo7/catering.kelompok47.my.id/public/index.php(55): Illuminate\Foundation\Http\Kernel->terminate()
+#8 {main}
+
+Next Illuminate\Contracts\Container\BindingResolutionException: Target class [Fruitcake\Cors\HandleCors] does not exist. in /home/kelompo7/catering.kelompok47.my.id/vendor/laravel/framework/src/Illuminate/Container/Container.php:891
+Stack trace:
+#0 /home/kelompo7/catering.kelompok47.my.id/vendor/laravel/framework/src/Illuminate/Container/Container.php(770): Illuminate\Container\Container->build()
+#1 /home/kelompo7/catering.kelompok47.my.id/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(881): Illuminate\Container\Container->resolve()
+#2 /home/kelompo7/catering.kelompok47.my.id/vendor/laravel/framework/src/Illuminate/Container/Container.php(706): Illuminate\Foundation\Application->resolve()
+#3 /home/kelompo7/catering.kelompok47.my.id/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(866): Illuminate\Container\Container->make()
+#4 /home/kelompo7/catering.kelompok47.my.id/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(239): Illuminate\Foundation\Application->make()
+#5 /home/kelompo7/catering.kelompok47.my.id/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(203): Illuminate\Foundation\Http\Kernel->terminateMiddleware()
+#6 /home/kelompo7/catering.kelompok47.my.id/public/index.php(55): Illuminate\Foundation\Http\Kernel->terminate()
+#7 {main}
+  thrown in /home/kelompo7/catering.kelompok47.my.id/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 891
+[14-Jun-2025 10:49:58 UTC] PHP Fatal error:  Uncaught ReflectionException: Class "Fruitcake\Cors\HandleCors" does not exist in /home/kelompo7/catering.kelompok47.my.id/vendor/laravel/framework/src/Illuminate/Container/Container.php:889
+Stack trace:
+#0 /home/kelompo7/catering.kelompok47.my.id/vendor/laravel/framework/src/Illuminate/Container/Container.php(889): ReflectionClass->__construct()
+#1 /home/kelompo7/catering.kelompok47.my.id/vendor/laravel/framework/src/Illuminate/Container/Container.php(770): Illuminate\Container\Container->build()
+#2 /home/kelompo7/catering.kelompok47.my.id/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(881): Illuminate\Container\Container->resolve()
+#3 /home/kelompo7/catering.kelompok47.my.id/vendor/laravel/framework/src/Illuminate/Container/Container.php(706): Illuminate\Foundation\Application->resolve()
+#4 /home/kelompo7/catering.kelompok47.my.id/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(866): Illuminate\Container\Container->make()
+#5 /home/kelompo7/catering.kelompok47.my.id/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(239): Illuminate\Foundation\Application->make()
+#6 /home/kelompo7/catering.kelompok47.my.id/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(203): Illuminate\Foundation\Http\Kernel->terminateMiddleware()
+#7 /home/kelompo7/catering.kelompok47.my.id/public/index.php(55): Illuminate\Foundation\Http\Kernel->terminate()
+#8 {main}
+
+Next Illuminate\Contracts\Container\BindingResolutionException: Target class [Fruitcake\Cors\HandleCors] does not exist. in /home/kelompo7/catering.kelompok47.my.id/vendor/laravel/framework/src/Illuminate/Container/Container.php:891
+Stack trace:
+#0 /home/kelompo7/catering.kelompok47.my.id/vendor/laravel/framework/src/Illuminate/Container/Container.php(770): Illuminate\Container\Container->build()
+#1 /home/kelompo7/catering.kelompok47.my.id/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(881): Illuminate\Container\Container->resolve()
+#2 /home/kelompo7/catering.kelompok47.my.id/vendor/laravel/framework/src/Illuminate/Container/Container.php(706): Illuminate\Foundation\Application->resolve()
+#3 /home/kelompo7/catering.kelompok47.my.id/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(866): Illuminate\Container\Container->make()
+#4 /home/kelompo7/catering.kelompok47.my.id/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(239): Illuminate\Foundation\Application->make()
+#5 /home/kelompo7/catering.kelompok47.my.id/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(203): Illuminate\Foundation\Http\Kernel->terminateMiddleware()
+#6 /home/kelompo7/catering.kelompok47.my.id/public/index.php(55): Illuminate\Foundation\Http\Kernel->terminate()
+#7 {main}
+  thrown in /home/kelompo7/catering.kelompok47.my.id/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 891
+[14-Jun-2025 10:50:07 UTC] PHP Fatal error:  Uncaught ReflectionException: Class "Fruitcake\Cors\HandleCors" does not exist in /home/kelompo7/catering.kelompok47.my.id/vendor/laravel/framework/src/Illuminate/Container/Container.php:889
+Stack trace:
+#0 /home/kelompo7/catering.kelompok47.my.id/vendor/laravel/framework/src/Illuminate/Container/Container.php(889): ReflectionClass->__construct()
+#1 /home/kelompo7/catering.kelompok47.my.id/vendor/laravel/framework/src/Illuminate/Container/Container.php(770): Illuminate\Container\Container->build()
+#2 /home/kelompo7/catering.kelompok47.my.id/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(881): Illuminate\Container\Container->resolve()
+#3 /home/kelompo7/catering.kelompok47.my.id/vendor/laravel/framework/src/Illuminate/Container/Container.php(706): Illuminate\Foundation\Application->resolve()
+#4 /home/kelompo7/catering.kelompok47.my.id/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(866): Illuminate\Container\Container->make()
+#5 /home/kelompo7/catering.kelompok47.my.id/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(239): Illuminate\Foundation\Application->make()
+#6 /home/kelompo7/catering.kelompok47.my.id/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(203): Illuminate\Foundation\Http\Kernel->terminateMiddleware()
+#7 /home/kelompo7/catering.kelompok47.my.id/public/index.php(55): Illuminate\Foundation\Http\Kernel->terminate()
+#8 {main}
+
+Next Illuminate\Contracts\Container\BindingResolutionException: Target class [Fruitcake\Cors\HandleCors] does not exist. in /home/kelompo7/catering.kelompok47.my.id/vendor/laravel/framework/src/Illuminate/Container/Container.php:891
+Stack trace:
+#0 /home/kelompo7/catering.kelompok47.my.id/vendor/laravel/framework/src/Illuminate/Container/Container.php(770): Illuminate\Container\Container->build()
+#1 /home/kelompo7/catering.kelompok47.my.id/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(881): Illuminate\Container\Container->resolve()
+#2 /home/kelompo7/catering.kelompok47.my.id/vendor/laravel/framework/src/Illuminate/Container/Container.php(706): Illuminate\Foundation\Application->resolve()
+#3 /home/kelompo7/catering.kelompok47.my.id/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(866): Illuminate\Container\Container->make()
+#4 /home/kelompo7/catering.kelompok47.my.id/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(239): Illuminate\Foundation\Application->make()
+#5 /home/kelompo7/catering.kelompok47.my.id/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(203): Illuminate\Foundation\Http\Kernel->terminateMiddleware()
+#6 /home/kelompo7/catering.kelompok47.my.id/public/index.php(55): Illuminate\Foundation\Http\Kernel->terminate()
+#7 {main}
+  thrown in /home/kelompo7/catering.kelompok47.my.id/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 891
+[14-Jun-2025 11:49:23 UTC] PHP Fatal error:  Cannot use Illuminate\Database\Eloquent\Model as Model because the name is already in use in /home/kelompo7/catering.kelompok47.my.id/app/Models/PesananMakanan.php on line 7
+[14-Jun-2025 11:49:30 UTC] PHP Fatal error:  Cannot use Illuminate\Database\Eloquent\Model as Model because the name is already in use in /home/kelompo7/catering.kelompok47.my.id/app/Models/PesananMakanan.php on line 7
+[14-Jun-2025 11:49:33 UTC] PHP Fatal error:  Cannot use Illuminate\Database\Eloquent\Model as Model because the name is already in use in /home/kelompo7/catering.kelompok47.my.id/app/Models/PesananMakanan.php on line 7
+[14-Jun-2025 11:50:39 UTC] PHP Fatal error:  Cannot use Illuminate\Database\Eloquent\Model as Model because the name is already in use in /home/kelompo7/catering.kelompok47.my.id/app/Models/PesananMakanan.php on line 7
+[17-Jun-2025 21:34:31 Asia/Jakarta] PHP Fatal error:  Namespace declaration statement has to be the very first statement or after any declare call in the script in /home/kelompo7/catering.kelompok47.my.id/app/Http/Controllers/DashboardKokiController.php on line 3
