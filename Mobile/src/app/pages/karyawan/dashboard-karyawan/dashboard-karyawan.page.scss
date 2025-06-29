@@ -1,0 +1,173 @@
+ion-content {
+  //--background: #F4F4F4;
+  --background: #fff;
+}
+
+ion-header, ion-toolbar, ion-content, ion-footer {
+  box-shadow: none !important;
+  border: none !important;
+  --border-width: 0 !important;
+  --border-color: transparent !important;
+  
+}
+
+ion-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600; /* bisa disesuaikan, contoh: 400, 600, 700 */
+  color: black;
+}
+
+
+.icon-buttons {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+ion-button {
+  width: 100%;
+}
+
+ion-icon {
+  color: black;
+}
+
+ion-card {
+  margin: 10px;
+  height: 100%;
+}
+
+ion-card-title {
+  font-size: 1em;
+  font-weight: bold;
+  white-space: normal;
+  text-align: center;
+  color: #080808;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+h1, h2 {
+  margin: 0;
+  font-weight: bold;
+}
+
+.ion-text-center {
+  text-align: center;
+}
+
+.card-jumlah {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.row-shift {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.row-shift ion-col {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Responsif untuk HP */
+@media (max-width: 767px) {
+  .row-shift {
+    justify-content: space-between;
+  }
+
+  .row-shift ion-col {
+    width: 48%;
+  }
+}
+
+/**/
+/* Gaya untuk kategori tombol seperti Shopee */
+.category-card {
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 8px 0;
+  text-align: center; /* Menjaga teks di bawah berada di tengah */
+}
+
+.category-btn {
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  padding: 20px;
+  font-size: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  height: 80px; /* Mengatur tinggi tombol agar lebih besar */
+  width: 100%;
+}
+
+.category-btn:hover {
+  background-color: #e0e0e0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.category-btn ion-icon {
+  font-size: 30px;
+  color: #333;
+}
+
+.category-text {
+  display: block; /* Agar teks berada di bawah */
+  margin-top: 10px; /* Jarak antara ikon dan teks */
+  font-weight: bold;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Mengatur responsivitas */
+@media (max-width: 768px) {
+  .category-btn {
+    font-size: 16px;
+  }
+}
+
+
+.category-row {
+  padding: 0;
+  margin: 0;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 0;
+}
+
+.category-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.category-button {
+  width: 50px;
+  height: 50px;
+  //border-radius: 12px;
+  //--background: #f0f0f0;
+  --color: #000;
+}
+
+.category-button ion-icon {
+  font-size: 24px;
+}
+
+.category-text {
+  margin-top: 4px;
+  font-size: 13px;
+  text-align: center;
+}

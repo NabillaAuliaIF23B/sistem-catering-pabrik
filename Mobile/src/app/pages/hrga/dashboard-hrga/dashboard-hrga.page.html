@@ -1,0 +1,214 @@
+<ion-header [translucent]="true">
+  <ion-toolbar style="--border-width: 0; --border-color: transparent;">
+    <ion-title>Dashboard</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" [fullscreen]="true">
+  
+  <div>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Manajemen Pesanan</ion-card-title>
+      </ion-card-header>
+      
+      <ion-grid>
+        <ion-row class="category-row">
+          
+          <ion-col class="btn" size="2">
+            <div class="category-wrapper">
+              <ion-button 
+                class="category-button" 
+                fill="clear" 
+                [routerLink]="'/input-jadwal'"
+                aria-label="Jadwal Shift"
+                (click)="removeFocusBeforeNavigate()">
+                <ion-icon slot="icon-only" name="calendar-outline"></ion-icon>
+              </ion-button>
+              <ion-text class="category-text">Input Jadwal</ion-text>
+            </div>
+          </ion-col>
+          
+          <ion-col class="btn" size="2">
+            <div class="category-wrapper">
+              <ion-button 
+                class="category-button" 
+                fill="clear" 
+                [routerLink]="'/jadwal-shift'"
+                aria-label="Jadwal Shift"
+                (click)="removeFocusBeforeNavigate()">
+                <ion-icon slot="icon-only" name="calendar-outline"></ion-icon>
+              </ion-button>
+              <ion-text class="category-text">Jadwal Shift</ion-text>
+            </div>
+          </ion-col>
+
+          <ion-col class="btn" size="2">
+            <div class="category-wrapper">
+              <ion-button 
+                class="category-button" 
+                fill="clear" 
+                [routerLink]="'/input-pesanan'"
+                aria-label="Verifikasi Pesanan"
+                (click)="removeFocusBeforeNavigate()">
+                <ion-icon slot="icon-only" name="checkmark-circle-outline"></ion-icon>
+              </ion-button>
+              <ion-text class="category-text">Input Pesanan</ion-text>
+            </div>
+          </ion-col>
+      
+          <ion-col class="btn" size="2">
+            <div class="category-wrapper">
+              <ion-button 
+                class="category-button" 
+                fill="clear" 
+                [routerLink]="'/jumlah-pesanan'"
+                aria-label="Verifikasi Pesanan"
+                (click)="removeFocusBeforeNavigate()">
+                <ion-icon slot="icon-only" name="checkmark-circle-outline"></ion-icon>
+              </ion-button>
+              <ion-text class="category-text">Jumlah Pesanan</ion-text>
+            </div>
+          </ion-col>
+
+          <ion-col class="btn" size="2">
+            <div class="category-wrapper">
+              <ion-button 
+                class="category-button" 
+                fill="clear" 
+                [routerLink]="'/input-laporan'"
+                aria-label="Verifikasi Pesanan"
+                (click)="removeFocusBeforeNavigate()">
+                <ion-icon slot="icon-only" name="checkmark-circle-outline"></ion-icon>
+              </ion-button>
+              <ion-text class="category-text">Input  Laporan</ion-text>
+            </div>
+          </ion-col>
+          
+        </ion-row>
+      </ion-grid>
+      
+    </ion-card>
+  </div>
+
+  <!-- Porsi makanan -->
+  <div>
+    <ion-card>
+      <br> 
+      <ion-grid>
+        <ion-title>Porsi Makanan</ion-title>
+        <ion-title>{{ tanggal }}</ion-title>
+        <ion-row>
+
+          <!-- Kotak Jumlah Makanan -->
+          <ion-col size="12" size-md="3">
+            <ion-card class="card-jumlah">
+              <ion-card-header>
+                <ion-card-title>Jumlah Porsi Makan</ion-card-title>
+              </ion-card-header>
+              <ion-card-content>
+                <ion-text color="primary">
+                  <h1>{{ total }}</h1>
+                </ion-text>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+
+          <!-- Kotak Shift -->
+          <ion-col size="12" size-md="9">
+            <ion-row class="row-shift">
+              <ion-col size="6" size-md="4">
+                <ion-card>
+                  <ion-card-header>
+                    <ion-card-title>Shift 1</ion-card-title>
+                  </ion-card-header>
+                  <ion-card-content>
+                    <ion-text><h2>{{ shift1 }}</h2></ion-text>
+                  </ion-card-content>
+                </ion-card>
+              </ion-col>
+              <ion-col size="6" size-md="4">
+                <ion-card>
+                  <ion-card-header>
+                    <ion-card-title>Shift 2</ion-card-title>
+                  </ion-card-header>
+                  <ion-card-content>
+                    <ion-text><h2>{{ shift2 }}</h2></ion-text>
+                  </ion-card-content>
+                </ion-card>
+              </ion-col>
+              <ion-col size="6" size-md="4">
+                <ion-card>
+                  <ion-card-header>
+                    <ion-card-title>Shift 3</ion-card-title>
+                  </ion-card-header>
+                  <ion-card-content>
+                    <ion-text><h2>{{ shift3 }}</h2></ion-text>
+                  </ion-card-content>
+                </ion-card>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+
+        </ion-row>
+
+        <!-- Baris keterangan makanan -->
+        <ion-row>
+          <ion-col size="12">
+            <ion-card style="margin-top: 16px; margin-bottom: 16px;">
+              <ion-card-content class="ion-text-center" >
+                <ion-text>
+                  <p>Karyawan yang Mengambil Makanan <strong> {{ totalSudah }}/{{ total }}</strong></p>
+                </ion-text>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+        <br>       
+      </ion-grid>
+    </ion-card>
+  </div>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="start" class="icon-buttons">
+      <ion-button 
+        [routerLink]="['/dashboard-hrga']" 
+        fill="clear" 
+        size="large"
+        aria-label="Dashboard"
+        (click)="removeFocusBeforeNavigate()">
+        <ion-icon name="grid-outline"></ion-icon>
+      </ion-button>
+      <ion-button 
+        [routerLink]="['/data-karyawan']" 
+        fill="clear" 
+        size="large"
+        aria-label="Data Karyawan"
+        (click)="removeFocusBeforeNavigate()">
+        <ion-icon name="people-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end" class="icon-buttons">
+      <ion-button 
+        [routerLink]="['/laporan']" 
+        fill="clear" 
+        size="large"
+        aria-label="Halaman 3"
+        (click)="removeFocusBeforeNavigate()">
+        <ion-icon name="list-outline"></ion-icon>
+      </ion-button>
+      <ion-button 
+        [routerLink]="['/profile-hrga']" 
+        fill="clear" 
+        size="large"
+        aria-label="Profil HRGA"
+        (click)="removeFocusBeforeNavigate()">
+        <ion-icon name="person-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
