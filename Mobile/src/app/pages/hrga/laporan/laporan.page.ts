@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { environment } from 'src/environments/environment';
+
 
 @Component({
   standalone: false,
@@ -50,7 +52,8 @@ export class LaporanPage implements OnInit {
       params.tahun = formData.tahun;
     }
 
-    this.http.get<any>('https://api.kelompok47.my.id/api/laporan-konsumsi/filter', { params })
+    this.http.get<any>(`${environment.apiUrl}/laporan-konsumsi/filter`, { params })
+
       .subscribe(res => {
         console.log('API Response:', res); // Debug
         this.laporanData = res.data;
