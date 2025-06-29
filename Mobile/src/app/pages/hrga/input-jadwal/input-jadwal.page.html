@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/dashboard-hrga"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Input Jadwal Shift</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form (ngSubmit)="submitJadwal()" #jadwalForm="ngForm">
+    
+    <ion-item>
+      <ion-label>Nama Karyawan</ion-label>
+      <ion-select
+        [(ngModel)]="id_karyawan"
+        name="id_karyawan"
+        interface="popover"
+        multiple="true"  
+        required
+      >
+        <ion-select-option
+          *ngFor="let karyawan of karyawans"
+          [value]="karyawan.id_karyawan"
+        >
+          {{ karyawan.nama }}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label position="floating">Tanggal</ion-label>
+      <br>
+      <ion-datetime
+        displayFormat="YYYY-MM-DD"
+        [(ngModel)]="tanggal"
+        name="tanggal"
+        required
+      ></ion-datetime>
+    </ion-item>
+
+    <ion-item class="shift-item">
+      <ion-label>Shift</ion-label>
+      <ion-select
+        [(ngModel)]="shift"
+        name="shift"
+        interface="popover"
+        required
+      >
+        <ion-select-option value="shift_1">Shift 1</ion-select-option>
+        <ion-select-option value="shift_2">Shift 2</ion-select-option>
+        <ion-select-option value="shift_3">Shift 3</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-button
+      expand="block"
+      type="submit"
+      fill="outline"
+      color="primary"
+      class="btn-hover"
+      [disabled]="!jadwalForm.form.valid"
+      >Simpan Jadwal
+    </ion-button>
+
+
+  </form>
+</ion-content>

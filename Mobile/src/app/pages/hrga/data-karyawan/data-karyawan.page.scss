@@ -1,0 +1,26 @@
+ion-content {
+    //--background: #F4F4F4;
+    --background: #fff;
+    
+  }
+ion-header, ion-toolbar, ion-content, ion-footer {
+    box-shadow: none !important;
+    border: none !important;
+    --border-width: 0 !important;
+    --border-color: transparent !important;
+}
+
+/*Footer*/
+.icon-buttons {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  
+  ion-button {
+    width: 100%;
+  }
+
+  ion-icon {
+    color: black;
+  }

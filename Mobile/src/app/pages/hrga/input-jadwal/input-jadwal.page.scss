@@ -1,0 +1,51 @@
+ion-header, ion-toolbar, ion-content, ion-footer {
+  box-shadow: none !important;
+  border: none !important;
+  --border-width: 0 !important;
+  --border-color: transparent !important;
+  
+}
+ion-content {
+  --background: #ffffff; // Latar belakang abu-abu terang
+  padding: 16px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; // Jarak antar elemen
+}
+
+ion-item {
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background: #ffffff; // agar input tetap terlihat jelas
+}
+
+ion-button {
+  margin-top: 20px;
+}
+
+ion-title {
+  font-weight: bold;
+}
+
+.btn-hover {
+  --background: transparent;
+  --color: var(--ion-color-primary);
+  --border-color: var(--ion-color-primary);
+  --border-width: 2px;
+  transition: background 0.3s, color 0.3s;
+}
+
+@media (hover: hover) {
+  .btn-hover:hover {
+    --background: var(--ion-color-primary);
+    --color: white;
+  }
+}
+
+ion-button.btn-hover:not([disabled]):hover {
+  --background: var(--ion-color-primary);
+  --color: white;
+}
