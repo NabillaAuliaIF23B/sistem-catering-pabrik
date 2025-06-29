@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { ToastController } from '@ionic/angular';
+import { environment } from 'src/environments/environment';
+
 
 @Component({
   standalone: false,
@@ -28,7 +30,7 @@ export class InputLaporanPage implements OnInit {
   async submitLaporan() {
     const formData = this.laporanForm.value;
 
-    this.http.post('https://api.kelompok47.my.id/api/laporan-konsumsi', formData).subscribe(
+    this.http.post(`${environment.apiUrl}/laporan-konsumsi`, formData).subscribe(
       async (res: any) => {
         const toast = await this.toast.create({
           message: res.message,
