@@ -71,10 +71,7 @@ const routes: Routes = [
     path: 'jumlah-pesanan',
     loadChildren: () => import('./pages/hrga/jumlah-pesanan/jumlah-pesanan.module').then( m => m.JumlahPesananPageModule)
   },
-  {
-    path: 'ganti-password-karyawan',
-    loadChildren: () => import('./pages/karyawan/ganti-password-karyawan/ganti-password-karyawan.module').then( m => m.GantiPasswordKaryawanPageModule)
-  },
+  
   
   
   
